@@ -1,0 +1,4 @@
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, label: 'Name your list', error: 'List name is mandatory, please specify one' %>
+  <%= f.button :submit, class:'btn btn-primary' %>
+<% end %>

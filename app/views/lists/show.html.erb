@@ -1,0 +1,45 @@
+<h2><%= @list.name %></h2>
+
+<div class="row">
+<% @list.movies.each do |movie| %>
+
+<div class="col-md-3 mb-5">
+  <div class="card shadow-sm">
+
+    <%= image_tag "https://image.tmdb.org/t/p/w500/#{movie.poster_url}" %>
+
+    <div class="card-body" style="height: 150px;">
+
+      <h5 class="card-title"><%= movie.title %></h5>
+      <% if movie.overview.length > 100 %>
+        <p class="card-title"><%= movie.overview[0,100]%>...</p>
+      <% else %>
+        <p class="card-title"><%= movie.overview %>...</p>
+      <% end %>
+
+    </div>
+
+    <div class="card-body border-top">
+      <% number_of_stars = movie.rating.to_i.round() / 2 %>
+      <% half_star =  %>
+      <% number_of_stars.times do |i| %>
+        <i class="fa-solid fa-star"></i>
+      <% end %>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+<% end %>
+
+</div>
+
+
+
+
+</p>

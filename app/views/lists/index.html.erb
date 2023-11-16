@@ -1,0 +1,25 @@
+<div class="shadow-lg movies-jumbotron rounded-4 row align-items-center p-5">
+  <div class="col-md-6 flex-wrap">
+    <h2 class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+    <p class="text-secondary">Sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+    <%= link_to 'Create your list', new_list_path, class:'btn btn-primary btn-lg' %>
+  </div>
+</div>
+
+
+<div class="row mt-5">
+  <%  @lists.each do |list| %>
+  <div class="col-md-4">
+    <div class="card">
+      <%= image_tag 'cinema.avif' %>
+      <div class="card-body">
+        <h5 class="card-title"><%= list.name %></h5>
+        <p class="card-text">This list has: <%= list.movies.count %> movies</p>
+      </div>
+      <div class="card-body border-top">
+        <%= link_to 'View', list_path(list), class:'btn btn-primary w-100' %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

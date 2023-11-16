@@ -1,0 +1,12 @@
+.movies-jumbotron {
+  min-height: 600px;
+  background: rgb(0,0,0);
+  background: linear-gradient(51deg, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.1) 100%);
+  background-image: url('camera.png');
+  background-size: cover;
+
+  h2 {
+    text-shadow: 1px 1px 10px black;
+    font-size: 3em;
+  }
+}

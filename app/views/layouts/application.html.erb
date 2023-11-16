@@ -10,7 +10,31 @@
     <%= javascript_importmap_tags %>
   </head>
 
+
+
   <body>
+
+<header>
+    <div class="px-3 py-2 text-bg-dark border-bottom">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <%= image_tag "tv.png", alt: "My movie lists", width: 50 %>
+          </a>
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <%= link_to new_list_path, class:"nav-link text-white" do %>
+                <i class="fa-solid fa-film"></i>
+                New list
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container mt-5">
     <%= yield %>
+  </div>
   </body>
 </html>
