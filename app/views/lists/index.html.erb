@@ -11,7 +11,7 @@
   <%  @lists.each do |list| %>
   <div class="col-md-4">
     <div class="card">
-      <%= image_tag 'cinema.avif' %>
+      <%= cl_image_tag list.photo.key, crop: :fill %>
       <div class="card-body">
         <h5 class="card-title"><%= list.name %></h5>
         <p class="card-text">This list has: <%= list.movies.count %> movies</p>
