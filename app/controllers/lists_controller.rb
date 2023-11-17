@@ -10,7 +10,7 @@ class ListsController < ApplicationController
   end
 
   def show
-
+    @comment = Comment.new
   end
 
   def create
@@ -31,8 +31,6 @@ class ListsController < ApplicationController
   def set_list
     @list = List.find(params[:id])
   end
-
-
 
   def list_params
     params.require(:list).permit(:name, :photo)

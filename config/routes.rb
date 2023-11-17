@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   resources :lists do
     resources :bookmarks, only: [:new, :create]
+    member do
+      resources :comments, only: [:new, :create]
+    end
   end
 
   resources :movies, only: [:index, :show] do
