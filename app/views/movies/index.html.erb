@@ -4,11 +4,9 @@
 
   <div class="col-lg-3 mb-5">
   <%= link_to "?#{movie.id}", 'data-bs-toggle':"modal", 'data-bs-target':"#exampleModal#{index}" do %>
-      <div class="card">
+      <div class="card movie-card-hover-animation">
         <%= image_tag "https://image.tmdb.org/t/p/w500/#{movie.poster_url}" %>
         <card-body>
-
-
         </card-body>
       </div>
   <% end %>
