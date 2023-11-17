@@ -16,9 +16,4 @@ movies['results'].each do |movie|
     puts 'Failed to save movie'
   end
 end
-
-List.create!(name: 'My seeded list')
-Bookmark.create!(comment: 'My seeded comment 1', movie_id: 1, list_id: "1")
-Bookmark.create!(comment: 'My seeded comment 2', movie_id: 2, list_id: 1)
-
 puts 'Done'
